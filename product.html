@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products Page </title>
+    <link rel="stylesheet" href="product.css">
+    <style>
+    </style>
+
+
+</head>
+
+<body>
+    <div id="main">
+        <div id="category">
+            <select onchange="changing ()" id="filter">
+                <option id="sort_name" value="Name"> Sort By : Name </option>
+                <option value="discount"> Sort By : Discount </option>
+                <option value="Descending"> Price : High To Low </option>
+                <option value="Asceneding"> Price : Low To High </option>
+
+            </select>
+            <div>
+                <select class="selector">
+                    <option id="sort_name" value="Name"> Category </option>
+                    <option value="discount"> Skin </option>
+                    <option value="Descending"> Hair </option>
+                    <option value="Asceneding">Men's Store</option>
+
+                </select>
+            </div>
+            <div >
+                <select class="static_dropdown">
+                    <option> Price </option>
+                </select>
+            </div>
+            <div>
+                <select class="static_dropdown">
+                    <option> Discount </option>
+                </select>
+            </div>
+            <div>
+                <select class="static_dropdown">
+                    <option> Avg Coustomer Rating </option>
+                </select>
+            </div>
+            <div>
+                <select class="static_dropdown">
+                    <option> Concern  </option>
+                </select>
+            </div>
+            <div>
+                <select class="static_dropdown">
+                    <option> Hair Type  </option>
+                </select>
+            </div>
+            <div>
+                <select class="static_dropdown">
+                    <option> Gender  </option>
+                </select>
+            </div>
+           <div class="static_dropdown">
+                <select class="static_dropdown">
+                    <option> Formulation  </option>
+                </select>
+            </div>
+            <div>
+                <select class="static_dropdown">
+                    <option> Color  </option>
+                </select>
+            </div>
+            <div>
+                <select class="static_dropdown">
+                    <option> Pack Size  </option>
+                </select>
+            </div>
+            <div>
+                <select class="static_dropdown">
+                    <option>Finish  </option>
+                </select>
+            </div>
+        </div>
+
+
+
+        <div class="products"> </div>
+
+    </div>
+
+
+</body>
+
+</html>
+<script src="product.js">
+
+</script>
