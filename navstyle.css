@@ -624,3 +624,207 @@ h3{
       }
 
 
+
+
+
+
+
+
+
+                    /* akshay part */
+
+
+
+
+                    #cat {
+                      text-align: center;
+                      font-size: 30px;
+                      color: rgb(77, 75, 75);
+                      margin-top: 50px;
+                  }
+          
+                  #FEATURED {
+                      width: 85%;
+                      display: grid;
+                      grid-template-columns: repeat(4, 1fr);
+                      grid-template-rows: repeat(3, 350px);
+                      align-items: center;
+                      margin: auto;
+                      margin-top: 20px;
+                      gap: 20px;
+                  }
+          
+                  #FEATURED>div:hover {
+                      display: block;
+                      text-align: center;
+                      background-color: white;
+                      cursor: pointer;
+                      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+                  }
+          
+                  img {
+                      width: 100%;
+                      border-radius: 5px;
+                  }
+          
+                  .dis {
+                      font-size: 18px;
+                      color: #f8609a;
+                      margin-top: 5px;
+                      padding: 0px 10px 0px 10px;
+                      text-align: center;
+                  }
+          
+                  .ext {
+                      font-size: 18px;
+                      color: #5c5d63;
+                      padding-left: 5px;
+                      padding: 0px 10px 0px 10px;
+                      text-align: center;
+                  }
+          
+                  #Acat {
+                      width: 85%;
+                      display: grid;
+                      grid-template-columns: repeat(2, 1fr);
+                      grid-template-rows: repeat(2, 340px);
+                      margin: auto;
+                      margin-top: 50px;
+                      gap: 20px;
+                  }
+          
+                  #Acat>:nth-child(1) {
+                      display: flex;
+                      align-items: flex-end;
+                      justify-content: center;
+                      background-image: url(https://images-static.nykaa.com/uploads/fedc302d-72c3-4f0b-9684-4ac49273afd1.jpg?tr=w-600,cm-pad_resize);
+                      background-position: center;
+                      background-size: cover;
+                      background-repeat: no-repeat;
+                      border-radius: 5px;
+                      cursor: pointer;
+                      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+                  }
+          
+                  #Acat>:nth-child(2) {
+                      display: flex;
+                      align-items: flex-end;
+                      justify-content: center;
+                      background-image: url(https://images-static.nykaa.com/uploads/0d208495-58fe-40cc-be26-991db2fc595e.jpg?tr=w-600,cm-pad_resize);
+                      background-position: center;
+                      background-size: cover;
+                      background-repeat: no-repeat;
+                      border-radius: 5px;
+                      cursor: pointer;
+                      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+                  }
+          
+                  #Acat>:nth-child(3) {
+                      display: flex;
+                      align-items: flex-end;
+                      justify-content: center;
+                      background-image: url(https://images-static.nykaa.com/uploads/a22a32cd-ac55-4a26-84db-b9e020f90b5b.gif?tr=w-600,cm-pad_resize);
+                      background-position: center;
+                      background-size: cover;
+                      background-repeat: no-repeat;
+                      border-radius: 5px;
+                      cursor: pointer;
+                      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+                  }
+          
+                  #Acat>div>div {
+                      width: 90%;
+                      height: 90px;
+                      background-color: white;
+                      display: flex;
+                      flex-direction: column;
+                      justify-content: center;
+                      align-items: center;
+                      border-radius: 5px;
+                  }
+          
+                  .fea {
+                      font-size: 20px;
+                      color: #f1327c;
+                  }
+          
+                  .pt {
+                      font-size: 20px;
+                  }
+          
+                  #everyday {
+                      width: 85%;
+                      margin: auto;
+                      margin-top: 30px;
+                      border-radius: 5px;
+                      cursor: pointer;
+                      background-color: white;
+                      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+                  }
+          
+                  #NICHEBEAUTY {
+                      width: 85%;
+                      display: grid;
+                      grid-template-columns: repeat(2, 1fr);
+                      grid-template-rows: auto;
+                      margin: auto;
+                      margin-top: 20px;
+                      gap: 20px;
+                  }
+          
+                  #NICHEBEAUTY>DIV:hover {
+                      border-radius: 5PX;
+                      cursor: pointer;
+                      background-color: white;
+                      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+                  }
+          
+                  #EDITOR {
+                      width: 85%;
+                      display: grid;
+                      grid-template-columns: repeat(4, 1fr);
+                      grid-template-rows: auto;
+                      margin: auto;
+                      margin-top: 20px;
+                      gap: 20px;
+                  }
+          
+                  #EDITOR>div:hover {
+                      border-radius: 5PX;
+                      cursor: pointer;
+                      background-color: white;
+                      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+                  }
+          
+                  #OFFERS {
+                      width: 50%;
+                      display: grid;
+                      grid-template-columns: repeat(2, 1fr);
+                      grid-template-rows: auto;
+                      margin: auto;
+                      margin-top: 20px;
+                      gap: 20px;
+                  }
+          
+                  #OFFERS>div:hover {
+                      display: block;
+                      text-align: center;
+                      cursor: pointer;
+                      background-color: white;
+                      box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+                  }
+
+
+
+
+
+
+
+
+
+                                /* Nazmins Part */
+
+
+
+        
+                      
