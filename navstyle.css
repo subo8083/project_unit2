@@ -403,7 +403,7 @@ h3{
         font-family: Inter, Roboto, Arial, sans-serif;
         font-size: 25px;
         color: rgb(59, 56, 56);
-        margin-bottom: 60px;
+        margin-bottom: 40px;
         margin-top: 30px;
       }
       #Onlyatnykaa {
@@ -416,9 +416,11 @@ h3{
         gap: 20px;
       }
       #Onlyatnykaa > div {
+        height:auto;
         /* border: 1px solid blue; */
         box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
         border-radius: 5px;
+        
       }
       #Onlyatnykaa > div:hover {
         box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -426,57 +428,71 @@ h3{
     
       #Onlyatnykaa > div > img {
         width: 100%;
+        height:auto;
+       
       }
     
       #second {
         width: 500px;
-        height: 100px;
-        position: absolute;
+        height: 70px;
         background-color: white;
         border-radius: 5px;
-        top: 44%;
-        left: 10%;
+        
       }
       #fourth {
         width: 500px;
-        height: 100px;
-        position: absolute;
+        height: 70px;
+       
         background-color: white;
         border-radius: 5px;
-        top: 44%;
-        left: 53%;
+        
       }
       #sixth {
         width: 500px;
-        height: 100px;
-        position: absolute;
+        height: 70px;
+        
         background-color: white;
         border-radius: 5px;
-        top: 98%;
-        left: 10%;
+       
       }
       #eighth {
         width: 500px;
-        height: 100px;
-        position: absolute;
+        height: 70px;
+       
         background-color: white;
         border-radius: 5px;
-        top: 98%;
-        left: 53%;
+       
       }
+     
       #second>h3,h4{
-        text-align: center;
-        
+      margin-top: 10px;
+      text-align: center ;
       }
       #fourth>h3,h4{
-        text-align: center;
+        margin-top: 10px;
+      text-align: center ;
       }
       #sixth>h3,h4{
-        text-align: center;
+      margin-top: 10px;
+      text-align: center ;
       }
       #eighth>h3,h4{
-        text-align: center;
+        margin-top: 10px;
+      text-align: center ;
       }
+      #second>h3,h4:hover{
+        cursor: pointer;
+      }
+      #fourth>h3,h4:hover{
+        cursor: pointer;
+      }
+      #sixth>h3,h4:hover{
+        cursor: pointer;
+      }
+      #eighth>h3,h4:hover{
+        cursor: pointer;
+      }
+       
     
       /* ---------------------------------------------------------------- */
       #secondheading {
@@ -484,6 +500,7 @@ h3{
         font-family: Inter, Roboto, Arial, sans-serif;
         font-size: 25px;
         color: rgb(59, 56, 56);
+        margin-bottom: 40px;
       }
       /* *,
       *:before,
@@ -492,6 +509,7 @@ h3{
       } */
       .container {
         margin-top: -15px;
+        margin-bottom: 20px;
       }
     
       .carousel {
@@ -566,15 +584,18 @@ h3{
         font-family: Inter, Roboto, Arial, sans-serif;
         font-size: 25px;
         color: rgb(59, 56, 56);
+        margin-bottom:40px;
       }
       img~h4 {
         text-align: center;
-        margin-top: -15px;
       }
       img~h3 {
         text-align: center;
         margin-top: 25px;
         color: #fc91a8;
+      }
+      img~h4:last-child:hover{
+        cursor: pointer;
       }
       .scrollmenu {
         width: 85%;
