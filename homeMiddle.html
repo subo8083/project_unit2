@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+        }
+
+        #cat {
+            text-align: center;
+            font-size: 30px;
+            color: rgb(77, 75, 75);
+            margin-top: 40px;
+        }
+
+        #best {
+            width: 85%;
+            margin: auto;
+            margin-top: 15px;
+            display: flex;
+            gap: 10px;
+        }
+
+        #best>figure {
+            width: 20%;
+            padding: 10px;
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        }
+
+        #best>figure>button {
+            color: #fc2779;
+            border: transparent;
+            font-size: 14px;
+            display: block;
+            margin: auto;
+            margin-bottom: 10px;
+        }
+
+        #FEATURED {
+            width: 85%;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: repeat(3, 350px);
+            align-items: center;
+            margin: auto;
+            margin-top: 20px;
+            gap: 20px;
+        }
+
+        #FEATURED>div:hover {
+            display: block;
+            text-align: center;
+            background-color: white;
+            cursor: pointer;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        }
+
+        img {
+            width: 100%;
+            border-radius: 5px;
+        }
+
+        .dis {
+            font-size: 18px;
+            color: #f8609a;
+            margin-top: 5px;
+            padding: 0px 10px 0px 10px;
+            text-align: center;
+        }
+
+        .ext {
+            font-size: 18px;
+            color: #5c5d63;
+            padding-left: 5px;
+            padding: 0px 10px 0px 10px;
+            text-align: center;
+        }
+
+        #Acat {
+            width: 85%;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, 340px);
+            margin: auto;
+            margin-top: 50px;
+            gap: 20px;
+        }
+
+        #Acat>:nth-child(1) {
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            background-image: url(https://images-static.nykaa.com/uploads/fedc302d-72c3-4f0b-9684-4ac49273afd1.jpg?tr=w-600,cm-pad_resize);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            border-radius: 5px;
+            cursor: pointer;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        }
+
+        #Acat>:nth-child(2) {
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            background-image: url(https://images-static.nykaa.com/uploads/0d208495-58fe-40cc-be26-991db2fc595e.jpg?tr=w-600,cm-pad_resize);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            border-radius: 5px;
+            cursor: pointer;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        }
+
+        #Acat>:nth-child(3) {
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            background-image: url(https://images-static.nykaa.com/uploads/a22a32cd-ac55-4a26-84db-b9e020f90b5b.gif?tr=w-600,cm-pad_resize);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            border-radius: 5px;
+            cursor: pointer;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        }
+
+        #Acat>div>div {
+            width: 90%;
+            height: 90px;
+            background-color: white;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border-radius: 5px;
+        }
+
+        .fea {
+            font-size: 20px;
+            color: #f1327c;
+        }
+
+        .pt {
+            font-size: 20px;
+        }
+
+        #everyday {
+            width: 85%;
+            margin: auto;
+            margin-top: 30px;
+            border-radius: 5px;
+            cursor: pointer;
+            background-color: white;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        }
+
+        #NICHEBEAUTY {
+            width: 85%;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: auto;
+            margin: auto;
+            margin-top: 20px;
+            gap: 20px;
+        }
+
+        #NICHEBEAUTY>DIV:hover {
+            border-radius: 5PX;
+            cursor: pointer;
+            background-color: white;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        }
+
+        #EDITOR {
+            width: 85%;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            grid-template-rows: auto;
+            margin: auto;
+            margin-top: 20px;
+            gap: 20px;
+        }
+
+        #EDITOR>div:hover {
+            border-radius: 5PX;
+            cursor: pointer;
+            background-color: white;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        }
+
+        #OFFERS {
+            width: 50%;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: auto;
+            margin: auto;
+            margin-top: 20px;
+            gap: 20px;
+        }
+
+        #OFFERS>div:hover {
+            display: block;
+            text-align: center;
+            cursor: pointer;
+            background-color: white;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Bestsellers -->
+    <p id="cat">Bestsellers</p>
+    <div id="best">
+        <figure>
+            <img src="https://images-static.nykaa.com/media/catalog/product/tr:h-800,w-800,cm-pad_resize/a/a/aadb28e8904320705275_1.jpg"
+                alt="">
+            <p style="padding: 0px 0px 0px 20px;font-size: 14px;">Sugar smukdge me Not liquedmini </p>
+            <p style="padding: 0px 0px 0px 20px;color: #5c5d63;">1.1mi each</p>
+            <p style="padding: 0px 0px 0px 20px;color: #5c5d63;">★★★★☆ 1512</p>
+            <p style="padding: 0px 0px 0px 20px;font-weight: bold;">MRP: ₹999</p>
+            <button>View</button>
+        </figure>
+        <figure>
+            <img src="https://images-static.nykaa.com/media/catalog/product/tr:h-800,w-800,cm-pad_resize/f/8/f8eeeadMINIM00000001_1n.jpg"
+                alt="">
+            <p style="padding: 0px 0px 0px 20px;font-size: 14px;">Lorem ipsum dolor sit amet. </p>
+            <p style="padding: 0px 0px 0px 20px;color: #5c5d63;">60ml each</p>
+            <p style="padding: 0px 0px 0px 20px;color: #5c5d63;">★★★★☆ 1024</p>
+            <p style="padding: 0px 0px 0px 20px;font-weight: bold;">MRP: ₹599</p>
+            <button>View</button>
+        </figure>
+        <figure>
+            <img src="https://images-static.nykaa.com/media/catalog/product/tr:h-800,w-800,cm-pad_resize/8/a/8a5474bDOTKE00000054-1.jpg"
+                alt="">
+            <p style="padding: 0px 0px 0px 20px;font-size: 14px;">Lorem ipsum dolor sit amet Then Tamut </p>
+            <p style="padding: 0px 0px 0px 20px;color: #5c5d63;">30ml each</p>
+            <p style="padding: 0px 0px 0px 20px;color: #5c5d63;">★★★★☆ 2548</p>
+            <p style="padding: 0px 0px 0px 20px;font-weight: bold;">MRP: ₹595</p>
+            <button>View</button>
+        </figure>
+        <figure>
+            <img src="https://images-static.nykaa.com/media/catalog/product/tr:h-800,w-800,cm-pad_resize/5/e/5e1500ajusth00000011_1.jpg"
+                alt="">
+            <p style="padding: 0px 0px 0px 20px;font-size: 14px;">Marsh Herbily Micro Minist Srimpt </p>
+            <p style="padding: 0px 0px 0px 20px;color: #5c5d63;">7ml each</p>
+            <p style="padding: 0px 0px 0px 20px;color: #5c5d63;">★★★★☆ 7658</p>
+            <p style="padding: 0px 0px 0px 20px;font-weight: bold;">MRP: ₹575</p>
+            <button>View</button>
+        </figure>
+        <figure>
+            <img src="https://images-static.nykaa.com/media/catalog/product/tr:h-800,w-800,cm-pad_resize/s/c/schwarzkopf-professional-osis_-sparkler-shine-spray.jpg"
+                alt="">
+            <p style="padding: 0px 0px 0px 20px;font-size: 14px;">Sugar smukdge me Not liquedmini dfgfdhy </p>
+            <p style="padding: 0px 0px 0px 20px;color: #5c5d63;">300mi each</p>
+            <p style="padding: 0px 0px 0px 20px;color: #5c5d63;">★★★★☆ 8574</p>
+            <p style="padding: 0px 0px 0px 20px;font-weight: bold;">MRP: ₹1000
+        </figure>
+        <!-- <figure>
+            <img src="https://images-static.nykaa.com/media/catalog/product/tr:h-800,w-800,cm-pad_resize/f/9/f93917fSTAYF00000008_1.jpg"
+                alt="">
+            <p style="padding: 0px 0px 0px 20px;font-size: 14px;">Sugar smukdge me Not liquedmini </p>
+            <p style="padding: 0px 0px 0px 20px;color: #5c5d63;">1.1mi each</p>
+            <p style="padding: 0px 0px 0px 20px;color: #5c5d63;">★★★★☆ 1512</p>
+            <p style="padding: 0px 0px 0px 20px;font-weight: bold;">MRP: ₹999</p>
+            <button>View</button>
+        </figure> -->
+
+
+
+    </div>
+
+    <!-- FEATURED BRANDS -->
+    <p id="cat">FEATURED BRANDS</p>
+    <div id="FEATURED">
+        <div>
+            <img src="https://images-static.nykaa.com/uploads/234b2f85-b606-4041-ab98-c70f1558f5dd.jpg?tr=w-300,cm-pad_resize"
+                alt="error">
+            <p class="dis">Flat 30%+</p>
+            <p class="ext">Extra 10% On 999+</p>
+        </div>
+        <div>
+            <img src="https://images-static.nykaa.com/uploads/21e9c37b-b13f-4cda-9ad5-37ed940db711.jpg?tr=w-300,cm-pad_resize"
+                alt="error">
+            <p class="dis">Flat 15% off+ </p>
+            <p class="ext">gree moustrixon woter worth rs 149 on Rs 549</p>
+        </div>
+        <div>
+            <img src="https://images-static.nykaa.com/uploads/0bb7aa78-80f3-4fee-93b8-ace45e976418.jpg?tr=w-300,cm-pad_resize"
+                alt="error">
+            <p class="dis">Flat 30% off+ </p>
+            <p class="ext">flat 10% off on Rs 999</p>
+        </div>
+        <div>
+            <img src="https://images-static.nykaa.com/uploads/6a0dd4b2-b6e7-4857-a80c-e563ee3bbf2c.jpg?tr=w-300,cm-pad_resize"
+                alt="error">
+            <p class="dis">Up to 100% off + 5% off </p>
+            <p class="ext">free flab bullet lipstik on Rs 999+</p>
+        </div>
+        <div>
+            <img src="https://images-static.nykaa.com/uploads/5bf97361-86c6-4aa0-9380-67aac3e0b564.gif?tr=w-300,cm-pad_resize"
+                alt="error">
+            <p class="dis">On Rs. 1000: Hair Cleanser</p>
+            <p class="ext">On Rs. 3000: Pick Your Gift</p>
+        </div>
+        <div>
+            <img src="https://images-static.nykaa.com/uploads/d8ae7805-cdcd-4e99-8f85-21d6a064bbe3.jpg?tr=w-300,cm-pad_resize"
+                alt="error">
+            <p class="dis">Up To 10% Off</p>
+            <p class="ext">On Salon Qaulity Haircare</p>
+        </div>
+        <div>
+            <img src="https://images-static.nykaa.com/uploads/7ad2f4af-4cea-4cb8-9cd8-21f43cd0194c.jpg?tr=w-300,cm-pad_resize"
+                alt="error">
+            <p class="dis">Flat 25% Off + Free Masaba Lipstick</p>
+            <p class="ext">Worth Rs. 599 On Rs. 1000</p>
+        </div>
+        <div>
+            <img src="https://images-static.nykaa.com/uploads/35a83957-5a98-48fc-bb90-948bacf04785.gif?tr=w-300,cm-pad_resize"
+                alt="error">
+            <p class="dis">Upto 30% Off</p>
+            <p class="ext">Free Oziva Inner Glow Face Serum On 699+</p>
+        </div>
+        <div>
+            <img src="https://images-static.nykaa.com/uploads/25f06fd5-a82b-4ecd-918e-2d4497c4f7ae.gif?tr=w-300,cm-pad_resize"
+                alt="error">
+            <p class="dis">Upto 30% Off</p>
+            <p class="ext">On Specially Curated Gift Sets</p>
+        </div>
+        <div>
+            <img src="https://images-static.nykaa.com/uploads/bebf60c5-7e43-4fe5-99d8-92e01cd0017f.jpg?tr=w-300,cm-pad_resize"
+                alt="error">
+            <p class="dis">Upto 30% Off</p>
+            <p class="ext">On Haircare Bestsellers</p>
+        </div>
+    </div>
+    <div id="Acat">
+        <div>
+            <div>
+                <p class="fea">Flat 15% Off +</p>
+                <p class="pt">Additional 5% Off On Rs.999</p>
+            </div>
+        </div>
+        <div>
+            <div>
+                <p class="fea">Buy Now Pay Later</p>
+                <p class="pt">With No Cost EMI</p>
+            </div>
+        </div>
+        <div>
+            <div>
+                <p class="fea">Up To 25% Off</p>
+                <p class="pt">Additional 5% Off On Rs.999</p>
+            </div>
+        </div>
+    </div>
+    <p id="cat">NYKAA EVERY DAY ESSENTIAL</p>
+    <div id="everyday">
+        <img src="https://images-static.nykaa.com/uploads/58f0a722-4c02-4ff6-9ec9-febcab2ebc0c.jpg?tr=w-1200,cm-pad_resize"
+            alt="">
+    </div>
+    <p id="cat">TOP CATEGORY FOR YOU</p>
+    <div id="everyday">
+        <img src="https://images-static.nykaa.com/uploads/4ed45eaa-1394-447a-9846-c07776cde4ad.gif?tr=w-1200,cm-pad_resize"
+            alt="">
+    </div>
+    <p id="cat">NICHE BEAUTY BRANDS</p>
+    <div id="NICHEBEAUTY">
+        <div>
+            <img src="https://images-static.nykaa.com/uploads/6d1126b4-97b6-40f9-a2fa-823885415229.jpg?tr=w-600,cm-pad_resize"
+                alt="">
+        </div>
+        <div>
+            <img src="https://images-static.nykaa.com/uploads/cc94fed6-1424-4b10-89c6-483abaf679da.jpg?tr=w-600,cm-pad_resize"
+                alt="">
+        </div>
+    </div>
+    <p id="cat">EDITOR'S CHOICE</p>
+    <div id="EDITOR">
+        <div>
+            <img src="https://images-static.nykaa.com/uploads/7673beb2-8624-46ec-8b9f-183c0999e77c.jpg?tr=w-300,cm-pad_resize"
+                alt="">
+        </div>
+        <div>
+            <img src="https://images-static.nykaa.com/uploads/9595ce41-fddb-4158-a9ca-d541e632ed1c.jpg?tr=w-300,cm-pad_resize"
+                alt="">
+        </div>
+        <div>
+            <img src="https://images-static.nykaa.com/uploads/f755518d-bd46-4c06-b0fa-0179004f7166.jpg?tr=w-300,cm-pad_resize"
+                alt="">
+        </div>
+        <div>
+            <img src="https://images-static.nykaa.com/uploads/253639fc-e789-4f17-86a2-2d793635d44d.jpg?tr=w-300,cm-pad_resize"
+                alt="">
+        </div>
+    </div>
+    <p id="cat">OFFERS YOU CAN'T MISS</p>
+    <div id="OFFERS">
+        <div>
+            <img src="https://images-static.nykaa.com/uploads/ed6e4ad5-5144-4f8f-8b36-db65ea6761c0.jpg?tr=w-300,cm-pad_resize"
+                alt="error">
+            <p class="dis">Flat 30%+</p>
+            <p class="ext">Extra 10% On 999+</p>
+        </div>
+        <div>
+            <img src="https://images-static.nykaa.com/uploads/ea847c20-71dd-492b-b8e3-c7556849a6dc.gif?tr=w-300,cm-pad_resize"
+                alt="error">
+            <p class="dis">Flat 30%+</p>
+            <p class="ext">Extra 10% On 999+</p>
+        </div>
+    </div>
+    <div id="everyday">
+        <img src="https://images-static.nykaa.com/uploads/3df85e95-5d80-46b7-a8fb-75fd485c35ba.jpg?tr=w-1200,cm-pad_resize"
+            alt="">
+    </div>
+    <div id="everyday">
+        <img src="https://images-static.nykaa.com/uploads/be9b21ef-4e90-4d84-b4f9-926f689914f1.png?tr=w-1200,cm-pad_resize"
+            alt="">
+    </div>
+    <div id="everyday">
+        <img src="https://images-static.nykaa.com/uploads/83f0c508-5ec8-4d27-80c2-34f96134b8b3.jpg?tr=w-1200,cm-pad_resize"
+            alt="">
+    </div>
+    <p id="cat">POP-UP STORES</p>
+    <div id="NICHEBEAUTY">
+        <div>
+            <img src="https://images-static.nykaa.com/uploads/d8e9eaed-7ec3-49b8-9cbd-a1d0bb7cf7db.gif?tr=w-600,cm-pad_resize"
+                alt="">
+        </div>
+        <div>
+            <img src="https://images-static.nykaa.com/uploads/d8a3982c-8b72-40d8-bf33-b1c13e682c20.png?tr=w-600,cm-pad_resize"
+                alt="">
+        </div>
+    </div>
+    <div id="EDITOR">
+        <div>
+            <img src="https://images-static.nykaa.com/uploads/60953441-2e9e-4892-8a4b-04bdfeed0a8d.jpg?tr=w-300,cm-pad_resize"
+                alt="">
+
+        </div>
+        <div>
+            <img src="https://images-static.nykaa.com/uploads/eba39b28-307f-49c6-a45e-dff4651de397.jpg?tr=w-300,cm-pad_resize"
+                alt="">
+
+        </div>
+        <div>
+            <img src="https://images-static.nykaa.com/uploads/b82eaeef-81fa-4c45-a9ba-f93ce45cb0f8.jpg?tr=w-300,cm-pad_resize"
+                alt="">
+
+        </div>
+        <div>
+            <img src="https://images-static.nykaa.com/uploads/42adc1ad-e766-4f09-9834-a6d2eeecfc66.jpg?tr=w-300,cm-pad_resize"
+                alt="">
+
+        </div>
+    </div>
+    <p id="cat">SPECIAL CURATIONS</p>
+    <div id="NICHEBEAUTY">
+        <div>
+            <img src="https://images-static.nykaa.com/uploads/3671a728-2665-44e1-8065-f7f75308c3cb.gif?tr=w-600,cm-pad_resize"
+                alt="">
+        </div>
+        <div>
+            <img src="https://images-static.nykaa.com/uploads/0767a3b8-61ec-43b0-901b-76ae5563fdb8.png?tr=w-600,cm-pad_resize"
+                alt="">
+        </div>
+    </div>
+    <p id="cat">BEAUTY ADVICE</p>
+    <div id="NICHEBEAUTY">
+        <div>
+            <img src="https://images-static.nykaa.com/uploads/e6ae051f-56e7-4079-93e4-b844af6e1d49.jpg?tr=w-600,cm-pad_resize"
+                alt="">
+        </div>
+        <div>
+            <img src="https://images-static.nykaa.com/uploads/eed34056-028f-4993-8a7a-3159ed83747e.png?tr=w-600,cm-pad_resize
+                alt=" error">
+        </div>
+    </div>
+    <div id="everyday">
+        <img src="https://images-static.nykaa.com/uploads/58c1c0b0-5a0b-4614-acfc-3205e669d8a7.jpg?tr=w-1200,cm-pad_resize"
+            alt="">
+    </div>
+</body>
+
+</html>
