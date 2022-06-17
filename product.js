@@ -161,7 +161,7 @@ let product_data=[
 ];
 
 
-
+let data =  JSON.parse(localStorage.getItem("cartPage"))||[];
 
 let productCont=document.querySelector(".products");
 
@@ -196,6 +196,17 @@ function display_product_data(product_data){
     let btn = document.createElement("button");
          btn.innerText= "Add To Bag";
          btn.setAttribute("id", "btn_cart")
+         btn.addEventListener("click",function (){
+           if( add_to_cart(element.id ===true)){
+            console.log(element)
+           data.push(element); 
+           localStorage.setItem("cartPage",JSON.stringify(data));
+                alert ("Added Sucessfully ");
+            }
+            else{
+                alert("Already added in cart ");
+            }
+         })
            
 
         
@@ -212,6 +223,7 @@ function display_product_data(product_data){
 // this comand is used to select the filter 
 
 document.querySelector("#filter").addEventListener("change",changing);
+let cartLS=JSON.parse(localStorage.getItem("cartPage")) || []
 
 function changing(){
     let selected = document.querySelector("#filter").value;
@@ -254,7 +266,14 @@ function changing(){
 
 }
 
-
+function add_to_cart(id){
+    for(let i=0; i<cartLS.length; i++){
+        if(cartLS[i].id === id){
+            return false;
+          }
+        }
+        return true; 
+}
 
 
 
