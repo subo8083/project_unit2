@@ -88,7 +88,7 @@
     
         #card_details{
             border: transparent ;
-            width: 25%;
+            width: 85%;
             justify-content: center;
             margin: auto;
             height: auto;
@@ -142,16 +142,16 @@
         <table>
             <thead>
                 <tr>
-                  <th> <h1>Payment Details </h1> </th>
+                  <th> <h1 style="margin-left: 500px">Payment Details </h1> </th>
                   </tr>
               </thead>
               <tbody id="body"></tbody>
               </table>
     </div class="Total_amount">
     
-        <h2 style="color: #fc428a;"> Cart Details </h2>
-        <div  id="total"> </div>
-        <button id="Pay"> Proceed For Payment </button>
+        <h2 style="color: #fc428a; margin: 20px"> Cart Details </h2>
+        <div style="margin: 20px;"  id="total"> </div>
+        <button style="margin: ;20px" id="Pay"> Proceed For Payment </button>
        
     </div>
 
@@ -231,7 +231,9 @@
         let tr =document.createElement("tr");
 
        let td1 = document.createElement("td");
-       td1.innerText="cart Item";
+       td1.innerText=element.name;
+       td1.style.padding="20px"
+       td1.style.color="rgb(234, 87, 87)"
 
        let td2 = document.createElement("td");
        td2.setAttribute("id", "price");
