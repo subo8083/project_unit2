@@ -267,10 +267,13 @@ h2:hover {
 </body>
 </html>
 <script>
+  let productcont=document.querySelector("#product");
     let cartitem =JSON.parse(localStorage.getItem("cartPage")) || [];
     console.log(cartitem);
 
     display_product_data(cartitem);  
+
+  
 
     let navCount = document.querySelector("#cou")
     navCount.textContent = cartitem.length;
@@ -278,6 +281,9 @@ h2:hover {
 
     function display_product_data(cartitem)
     {
+
+      productcont.innerHTML=""
+
         cartitem.forEach( function(element,index){
 
         let box = document.createElement("div");
@@ -326,8 +332,7 @@ h2:hover {
     }
     function deletedata(INDEX) {
         let filter = cartitem.filter(function (el,index)
-         {
-            
+         { 
             return index!=INDEX;
         })
         cartitem = filter;
