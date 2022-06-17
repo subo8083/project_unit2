@@ -291,3 +291,18 @@ let blink=document.getElementById("blink");
 
 
     
+    let str=localStorage.getItem("userNAMEE")||[];
+    console.log(str)
+
+    if(str.length>0)
+    {
+      document.getElementById("AccountUser").innerText=str
+    }
+
+
+    document.querySelector("#cartlogo").addEventListener("click",cartfunction);
+
+function cartfunction(){
+  window.location.href="cart.html";
+
+}

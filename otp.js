@@ -11,7 +11,7 @@ function otpFun(event) {
    let enteredOTP = document.querySelector("#input").value;
    if (enteredOTP == storedOTP) {
       alert("Payment Successful!");
-      window.location.href = "http://127.0.0.1:5500/Success%20part/Success.html";
+      window.location.href = "Success.html";
    } else {
       alert("Invalid OTP");
       window.location.href = "http://127.0.0.1:5500/Payment%20part/payment.html";

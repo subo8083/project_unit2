@@ -9,7 +9,7 @@ function proceed(event){
     let enteredexpiry=document.querySelector("#date").value;
     
     if(enterednum==cardnum && enteredcvv==cvv && enteredexpiry==expiry){
-         window.location.href="http://127.0.0.1:5500/otp%20part/otp.html";
+         window.location.href="otp.html";
         }else{
             alert("Invalid Credentials!");
             document.querySelector("#cardno").value="";
@@ -17,3 +17,7 @@ function proceed(event){
             document.querySelector("#date").value="";
           }  
     }
+
+    let x=localStorage.getItem("cart-amount")||[];
+    document.querySelector("#amt1").innerHTML=x;
+    document.querySelector("#amt2").innerHTML=x;

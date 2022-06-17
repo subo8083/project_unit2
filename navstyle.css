@@ -4,13 +4,7 @@
   box-sizing: border-box;
 } */
 
-#cartlogo {
-  width: 20px;
-  display: block;
-  margin-left: 350px;
-  margin-top: -28px;
-  cursor: pointer;
-}
+
 
 #navbar {
   /* border: 1px solid red; */
@@ -59,7 +53,7 @@ h2 {
   font-weight: lighter;
   font-family: sans-serif;
   margin-right: 10px;
-  margin-top: -5px;
+  margin-top: 5px;
   /* border: 1px solid red; */
 }
 
@@ -73,6 +67,21 @@ h2:hover {
 
 
 /* for second navbarpage */
+
+
+
+
+#cartlogo {
+  width: 20px;
+  display: block;
+  margin-left: 350px;
+  margin-top: -28px;
+  cursor: pointer;
+}
+
+
+
+
 
 #navbar2 {
   display: flex;

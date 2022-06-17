@@ -6,11 +6,78 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add to cart </title>
     <style>
-         * {
+         /* * {
             margin: 0px;
             padding: 0px;
             box-sizing: border-box;
-        }
+        } */
+
+
+
+                /* Navbar */
+
+
+                #navbar {
+  /* border: 1px solid red; */
+  display: flex;
+  justify-content: space-around;
+  background-image: url("https://adn-static1.nykaa.com/media/wysiwyg/2022/common-strip-17-6-22.jpg");
+  height: 45px;
+
+}
+
+#logos>div {
+  display: flex;
+  /* border: 1px solid black; */
+  justify-content: space-around;
+  background-color: transparent;
+  /* width:150px; */
+  margin-top: 10px;
+}
+
+#logos>div>img {
+  width: 40px;
+  cursor: pointer;
+  height: 30px;
+  margin-top: -5px;
+  margin-left: 30px;
+
+
+}
+
+h1 {
+  font-weight: bold;
+  font-size: 16px;
+  width: 500px;
+  margin-right: 200px;
+  margin-left: 150px;
+  cursor: pointer;
+  font-family: sans-serif;
+  margin-top: 13px;
+  /* border: 1px solid red; */
+}
+
+h2 {
+  font-size: 14px;
+  /* width:150px; */
+  cursor: pointer;
+  font-weight: lighter;
+  font-family: sans-serif;
+  margin-right: 10px;
+  margin-top: 5px;
+  /* border: 1px solid red; */
+}
+
+h1:hover {
+  color: white;
+}
+
+h2:hover {
+  color: white;
+}
+
+
+
         #cardnav {
             width: 20%;
             height: 40px;
@@ -127,6 +194,48 @@
     </style>
 </head>
 <body>
+
+
+    <div id="navbar">
+        <div>
+          <h1 id="blink">BEAUTY BONNZA Get you Daily Dose of Amazing Deals</h1>
+        </div>
+        <div id="logos">
+          <div>
+            <img src="https://i.pinimg.com/originals/63/b3/d9/63b3d9ccb82555c2c9611ba41a62044d.png" alt="">
+            <h2>Get App |</h2>
+          </div>
+        </div>
+        <div id="logos">
+          <div>
+            <img src="https://www.freeiconspng.com/thumbs/location-icon-png/location-outline-icon-9.png" alt="" />
+            <h2>Store & Events |</h2>
+          </div>
+        </div>
+        <div id="logos">
+          <div>
+            <img src="https://cdn-icons-png.flaticon.com/512/1332/1332607.png" alt="">
+            <h2>Gift Card |</h2>
+          </div>
+        </div>
+        <div id="logos">
+          <div>
+            <img src="https://iconape.com/wp-content/png_logo_vector/question-circle.png" alt="" />
+            <h2>Help |</h2>
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+
+
+
+
+
+
     <div class="cardnav"> 
     <h1>
     </h1>
@@ -142,7 +251,7 @@
         <table>
             <thead>
                 <tr>
-                  <th> <h1 style="margin-left: 500px">Payment Details </h1> </th>
+                  <th> <h1 style="margin-left: 400px;font-size: 25px;">Payment Details </h1> </th>
                   </tr>
               </thead>
               <tbody id="body"></tbody>
@@ -169,7 +278,7 @@
 
     function display_product_data(cartitem)
     {
-        cartitem.forEach( function(element){
+        cartitem.forEach( function(element,index){
 
         let box = document.createElement("div");
         box.setAttribute("id","box")
@@ -195,7 +304,7 @@
 
         deleteCard.src = "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTue2o4GYBj0YWlNFLb3jpF219QMwVzj8bJGdaEIybCK9COmZUfuNalIsZ-9LsRDgSTViY&usqp=CAU"
         deleteCard.addEventListener("click", function () {
-                deletedata(element.name)
+                deletedata(index)
             })
             
             imgdiv.append(image);
@@ -215,9 +324,11 @@
 
         })
     }
-    function deletedata(name) {
-        let filter = cartitem.filter(function (el) {
-            return el.name != name
+    function deletedata(INDEX) {
+        let filter = cartitem.filter(function (el,index)
+         {
+            
+            return index!=INDEX;
         })
         cartitem = filter;
         localStorage.setItem("cartPage", JSON.stringify(cartitem))
@@ -242,8 +353,7 @@
             
             console.log(td2,"Iam td2")
             total = total+Number(element.price)
-       
-        
+            localStorage.setItem("cart-amount",total);
         
        tr.append(td1,td2);
         document.querySelector("#body").append(tr);
@@ -259,5 +369,16 @@ function paymentfunc(){
 
     // let td3= document.getElementById(price);
     //     console.log(td3);
+
+
+
+
+
+
+    let blink = document.getElementById("blink");
+setInterval(function () {
+  blink.style.opacity = (blink.style.opacity == 0 ? 1 : 0);
+}, 500)
+
    
 </script>
