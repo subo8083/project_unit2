@@ -176,7 +176,7 @@ function myproducts() {
   {
     window.location.href = "product.html"
 
-    localStorage.setItem("products", JSON.stringify(data))
+    
   }
 
   else{
@@ -368,4 +368,11 @@ function moveBasedOnMouse(e) {
 
 function likemeee() {
   window.location.href = "product.html"
+}
+
+document.querySelector("#cartlogo").addEventListener("click",cartfunction);
+
+function cartfunction(){
+  window.location.href="cart.html";
+
 }
