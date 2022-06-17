@@ -176,7 +176,7 @@ h2:hover {
 /* Change color of dropdown links on hover */
 #dropdown-content2 a:hover {
   background-color: transparent;
-  color: rgb(231, 43, 43);
+  color: #fc2779;
 }
 
 /* Show the dropdown menu on hover */
@@ -194,7 +194,7 @@ h2:hover {
 
 /* Change the background color of the dropdown button when the dropdown content is shown */
 .dropbtn2:hover {
-  color: rgb(216, 32, 63);
+  color: #fc2779;
   cursor: pointer;
 
 
@@ -211,8 +211,9 @@ h2:hover {
 }
 
 #dropdown-content2>button:hover {
-  background-color: rgb(234, 87, 87);
+  background-color: #fc2779;
   cursor: pointer;
+  color: white;
   /* margin-top: 20px; */
 }
 
