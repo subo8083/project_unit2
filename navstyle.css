@@ -5,13 +5,19 @@
   box-sizing: border-box;
 }
 
-
+#cartlogo{
+  width:20px;
+  display: block;
+  margin-left: 350px;
+  margin-top: -28px;
+  cursor: pointer;
+}
 
 #navbar{
     /* border: 1px solid red; */
     display:flex;
     justify-content: space-around;
-    background-image:url("https://www.ambiencemalls.com/logos/02-31-19pm_01-02-2019-nykaa.png");
+    background-image: url("https://adn-static1.nykaa.com/media/wysiwyg/2022/common-strip-17-6-22.jpg");
     height: 45px;
    
 }
@@ -20,16 +26,16 @@
     /* border: 1px solid black; */
     justify-content: space-around;
     background-color: transparent;
-    width:200px;
+    /* width:150px; */
     margin-top: 10px;
         }
 #logos>div>img{
     width:40px;
-    background-image: url("https://www.ambiencemalls.com/logos/02-31-19pm_01-02-2019-nykaa.png");
     cursor: pointer;
     height: 30px;
     margin-top: -5px;
     margin-left: 30px;
+    
     
 }
 h1{
@@ -41,14 +47,22 @@ h1{
     cursor: pointer;
     font-family:sans-serif;
     margin-top: 13px;
+    /* border: 1px solid red; */
 }
 h2{
     font-size: 14px;
-    width:120px;
+    /* width:150px; */
     cursor: pointer;
     font-weight: lighter;
     font-family: sans-serif;
-    margin-right:10px 
+    margin-right:10px;
+    /* border: 1px solid red; */
+}
+h1:hover{
+  color: white;
+}
+h2:hover{
+  color: white;
 }
 
 
@@ -104,9 +118,15 @@ margin-top: 15px;
 
 .dropdown2:last-child>input{
 border-color:#f1f1f1;
-background-color: beige;
-height: 30px;
-width: 60%;
+background-color: rgb(238, 238, 238);
+height: 40px;
+width: 70%;
+border: transparent;
+font-weight: bold;
+font-family: sans-serif;
+margin-right: 10px;
+margin-top: -7px;
+text-align: center;
 }
 .dropdown2:last-child>a{
 color:black;
@@ -326,6 +346,7 @@ display: block;
 margin: auto;
 margin-top: 20px;
 cursor: pointer;
+width: 80%;
 }
 
 #top{
