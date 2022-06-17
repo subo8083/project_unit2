@@ -160,6 +160,9 @@ let product_data=[
 
 ];
 
+
+
+
 let productCont=document.querySelector(".products");
 
 function display_product_data(product_data){
@@ -264,3 +267,8 @@ let blink=document.getElementById("blink");
     setInterval(function(){
         blin.style.opacity=(blink.style.opacity==0?1:0);
     },200)
+
+
+
+
+    

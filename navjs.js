@@ -43,6 +43,21 @@ setInterval(function () {
 }, 1500)
 
 
+      
+
+      let str=localStorage.getItem("userNAMEE")||[];
+      console.log(str)
+
+      if(str.length>0)
+      {
+        document.getElementById("AccountUser").innerText=str
+      }
+      // else
+      // {
+      //   document.getElementById("AccountUser").innerText="Account"
+      // }
+
+      
 
 
 
@@ -155,9 +170,21 @@ display_data(data);
 
 //myproducts();
 function myproducts() {
-  window.location.href = "product.html"
 
-  localStorage.setItem("products", JSON.stringify(data))
+  let str=localStorage.getItem("userNAMEE")||[];
+  if(str.length>0)
+  {
+    window.location.href = "product.html"
+
+    localStorage.setItem("products", JSON.stringify(data))
+  }
+
+  else{
+    alert("you need to Login First")
+    window.location.href="signup.html"
+  }
+  
+
 
 }
 
