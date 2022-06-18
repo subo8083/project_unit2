@@ -25,3 +25,19 @@ function proceed(event){
 
     let cartitem =JSON.parse(localStorage.getItem("cartPage")) || [];
     document.querySelector("#quanT").innerHTML=cartitem.length;
+// ------------------------------------------------------------------------------------
+    let details = JSON.parse(localStorage.getItem("AddData"))||[];
+    console.log(details);
+
+    details.forEach(function(el){
+
+      let name = document.querySelector("#Name").innerText = el.Name;
+    console.log(name)
+
+    let address = document.querySelector("#address").innerText = el.Addresss;
+    console.log(address)
+
+    let mobile = document.querySelector("#mobile").innerText = el.phone;
+    console.log(mobile)
+
+    });

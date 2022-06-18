@@ -17,7 +17,7 @@
 
 <body>
     
-    <div id="AddNav"><img src="images/AddressNav.PNG" alt=""></div>
+    <div id="addnav"><img src="AddressNav.PNG" alt=""></div>
     <form action="" id="form">
     <div id="main">
         <div id="AddressDetail">
@@ -73,8 +73,9 @@
             
         }
         AddArr.push(AddressObj);
+    
         localStorage.setItem("AddData",JSON.stringify(AddArr))
-        window.location.href="AddressDisplay.html"
-
+        window.location.href="http://127.0.0.1:5500/payment.html"
     }
+    
 </script>
